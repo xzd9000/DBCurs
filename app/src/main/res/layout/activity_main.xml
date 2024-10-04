@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/specialButton"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#673AB7"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="specialOnClick"
+        android:text="@string/givenText"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/groupButton"
+        app:layout_constraintEnd_toStartOf="@+id/groupButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/groupButton" />
+
+    <Button
+        android:id="@+id/resetButton"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#673AB7"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="resetOnClick"
+        android:text="@string/pageResetText"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/applyButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/applyButton"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#673AB7"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="applyOnClick"
+        android:text="@string/pageApplyText"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/resetButton" />
+
+    <EditText
+        android:id="@+id/filterTextField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/columnDropdown"
+        app:layout_constraintTop_toBottomOf="@+id/filterButton"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/filterButton"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#673AB7"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="filterOnClick"
+        android:text="@string/pageFilterText"
+        android:textSize="12sp"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/groupButton"
+        app:layout_constraintEnd_toStartOf="@+id/optionsButton"
+        app:layout_constraintStart_toEndOf="@+id/groupButton"
+        app:layout_constraintTop_toTopOf="@+id/groupButton"
+        app:strokeColor="@color/purple_700" />
+
+    <Button
+        android:id="@+id/groupButton"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#673AB7"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="groupOnClick"
+        android:text="@string/pageGroupText"
+        android:textSize="12sp"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/filterButton"
+        app:layout_constraintStart_toEndOf="@+id/specialButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/columnDropdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="170dp"
+        android:minWidth="120dp"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/specialButton"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/columnDropdown">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monday" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tuesday" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wednesday" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/resetButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs" >
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+    <ImageButton
+        android:id="@+id/optionsButton"
+        style="@android:style/Widget.DeviceDefault.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="#673AB7"
+        android:minWidth="50dp"
+        android:onClick="optionsOnClick"
+        app:layout_constraintBottom_toBottomOf="@+id/groupButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/groupButton"
+        app:srcCompat="@android:drawable/ic_menu_more"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

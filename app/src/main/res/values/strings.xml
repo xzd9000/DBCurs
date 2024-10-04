@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">DBCurs</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tab_text_1">Клиенты</string>
+    <string name="tab_text_2">Фильмы</string>
+    <string name="tab_text_3">Прокат</string>
+    <string name="pageGroupText">Группировать</string>
+    <string name="pageFilterText">Фильтр</string>
+    <string name="pageResetText">Сброс</string>
+    <string name="pageApplyText">Применить</string>
+    <string name="givenText">На руках</string>
+    <string name="tenDaysText">\>10 дней</string>
+
+    <string name="dbColumnClientPassport">Пасспорт</string>
+    <string name="dbColumnClientPhone">Телефон</string>
+    <string name="dbColumnClientName">Имя</string>
+    <string name="dbColumnClientAddress">Адрес</string>
+
+    <string name="dbColumnMovieTitle">Название</string>
+    <string name="dbColumnMovieDirector">Режиссёр</string>
+    <string name="dbColumnMovieGenre">Жанр</string>
+    <string name="dbColumnMovieStarring">В ролях</string>
+    <string name="dbColumnMovieReleaseYear">Год выпуска</string>
+    <string name="dbColumnMovieAnnotation">Аннотация</string>
+    <string name="dbColumnMovieRentCost">Стоимость аренды</string>
+    <string name="dbColumnMovieStudio">Студия</string>
+
+    <string name="dbColumnRentClient">Клиент</string>
+    <string name="dbColumnRentMovie">Фильм</string>
+    <string name="dbColumnRentGiveDate">Дата выдачи</string>
+    <string name="dbColumnRentReturnDate">Дата возврата</string>
+
+    <string name="optionsAdd">Добавить</string>
+    <string name="optionsDelete">Удалить</string>
+    <string name="optionsAlter">Изменить</string>
+
+    <string name="dateTemplate">ДД.ММ.ГГГГ</string>
+
+    <string name="itemNotSelected">Запись не выбрана!</string>
+    <string name="itemConnected">Нельзя удалить пока существует запись аренды</string>
+
+    <string name="dataErrorNotFilled">Не заполнены необходимые поля</string>
+    <string name="dataErrorDuplicateClient">Клиент уже существует</string>
+    <string name="dataErrorDuplicateMovie">Фильм уже существует</string>
+    <string name="dataErrorWrongCost">Недопустимая стоимость аренды</string>
+    <string name="dataErrorWrongDateFormat">Неверный формат даты</string>
+    <string name="dataErrorWrongReturnDate">Неверная дата возврата</string>
+</resources>
